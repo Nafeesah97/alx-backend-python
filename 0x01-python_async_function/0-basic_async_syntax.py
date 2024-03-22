@@ -7,7 +7,7 @@ Author: Nafeesah
 """
 
 
-async def wait_random(max_delay=10):
+async def wait_random(max_delay: int = 10) -> float:
     """waits for random delay and return it"""
     delay = random.uniform(0, max_delay)
     await asyncio.sleep(delay)
