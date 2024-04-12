@@ -33,7 +33,7 @@ class TestAccessNestedMap(unittest.TestCase):
 class TestGetJson(unittest.TestCase):
     """
     To test the get json method
-    
+
     Method:
         test_get_json():
         to test that utils.get_json returns the expected result
@@ -43,7 +43,6 @@ class TestGetJson(unittest.TestCase):
         ("http://example.com", {"payload": True}),
         ("http://holberton.io", {"payload": False})
     ])
-
     def test_get_json(self, url, expected_value):
         """To test get_json method of utils"""
         mock_res = Mock()
