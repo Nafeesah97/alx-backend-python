@@ -46,7 +46,8 @@ class TestGetJson(unittest.TestCase):
 
     def test_get_json(self, url, expected_value):
         """To test get_json method of utils"""
-        with patch(get_json) as test_get_json:
-            response = test_get_json(url)
+        with patch('utils.get_json') as test_get_json:
+            test_get_json.return_value = expected_value
+            response = get_json(url)
         test_get_json.assert_called_once_with(url)
         self.assertEqual(response, expected_value)
