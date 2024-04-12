@@ -58,8 +58,7 @@ class  TestMemoize(unittest.TestCase):
     """
     To test the memoize function in the utils class
     """
-
-    def test_memoize(self):
+    def test_memoize(self) -> None:
         """Testing the memooize function"""
         class TestClass:
             def a_method(self):
@@ -68,7 +67,6 @@ class  TestMemoize(unittest.TestCase):
             @memoize
             def a_property(self):
                 return self.a_method()
-        
 
         mock_res = Mock()
         with patch.object(
