@@ -71,8 +71,8 @@ class  TestMemoize(unittest.TestCase):
         
 
         mock_res = Mock()
-        with patch('TestClass.a_method') as res:
+        with patch('self.TestClass.a_method') as res:
             res.return_value = mock_res
-            first_call = TestClass.a_property()
-            second_call = TestClass.a_property()
+            first_call = self.TestClass.a_property()
+            second_call = self.TestClass.a_property()
             res.assert_called_once()
