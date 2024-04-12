@@ -54,7 +54,7 @@ class TestGetJson(unittest.TestCase):
             self.assertEqual(response, expected_value)
 
 
-class  TestMemoize(unittest.TestCase):
+class TestMemoize(unittest.TestCase):
     """
     To test the memoize function in the utils class
     """
@@ -70,7 +70,8 @@ class  TestMemoize(unittest.TestCase):
 
         mock_res = Mock()
         with patch.object(
-            TestClass, "a_method", return_value=lambda: 42) as res:
+            TestClass, "a_method", return_value=lambda: 42
+        ) as res:
             test_class = TestClass()
             first_call = test_class.a_property()
             second_call = test_class.a_property()
