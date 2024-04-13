@@ -3,7 +3,7 @@
 from client import GithubOrgClient
 import unittest
 from parameterized import parameterized
-from unittest.mock import PropertyMock, patch
+from unittest.mock import MagicMock, PropertyMock, patch
 
 
 class TestGithubOrgClient(unittest.TestCase):
