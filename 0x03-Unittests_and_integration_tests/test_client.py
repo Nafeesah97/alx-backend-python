@@ -19,7 +19,7 @@ class TestGithubOrgClient(unittest.TestCase):
     def test_org(self, org_name, mock_res):
         """test that GithubOrgClient.org returns the correct value"""
         ORG_URL = f"https://api.github.com/orgs/{org_name}"
-        
+
         client = GithubOrgClient(org_name)
 
         org_result = client.org()
@@ -95,4 +95,3 @@ class TestGithubOrgClient(unittest.TestCase):
             )
             mock_public_repos_url.assert_called_once()
         mock_get_json.assert_called_once()
-
