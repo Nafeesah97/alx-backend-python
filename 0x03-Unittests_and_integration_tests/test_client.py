@@ -15,7 +15,7 @@ class TestGithubOrgClient(unittest.TestCase):
         ("google",),
         ("abc",),
     ])
-    @patch('GithubOrgClient.get_json')
+    @patch('client.get_json')
     def test_org(self, org_name, mock_res):
         """test that GithubOrgClient.org returns the correct value"""
         ORG_URL = f"https://api.github.com/orgs/{org_name}"
