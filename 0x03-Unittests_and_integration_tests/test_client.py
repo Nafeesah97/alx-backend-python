@@ -9,7 +9,6 @@ from unittest.mock import MagicMock, Mock, PropertyMock, patch
 from fixtures import TEST_PAYLOAD
 
 
-
 class TestGithubOrgClient(unittest.TestCase):
     """
     A class that contains the tests
